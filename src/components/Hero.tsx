@@ -14,22 +14,19 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-secondary via-secondary/95 to-secondary/90 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      
-      {/* Theme Toggle */}
+    <section className="min-h-screen flex items-center justify-center text-white relative overflow-hidden">
       <motion.button
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
         onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        className="fixed top-4 right-4 p-2 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 hover:bg-primary/20 transition-colors"
+        className="fixed top-4 right-4 p-2 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 hover:bg-primary/20 transition-colors z-50"
         aria-label="Toggle theme"
       >
         {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
       </motion.button>
 
-      <div className="container mx-auto px-4 z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center gap-8">
           <motion.div
             initial={{ scale: 0 }}
@@ -85,7 +82,7 @@ export const Hero = () => {
               <Button
                 size="lg"
                 asChild
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white px-8 py-3 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5"
+                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-white px-8 py-3 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-0.5 backdrop-blur-sm"
               >
                 <a href="https://www.behance.net/aqeel_roy" target="_blank" rel="noopener noreferrer">
                   View My Work
