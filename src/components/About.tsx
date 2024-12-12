@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { AfterEffects, PremierePro, Video, Laptop, Palette, Trophy, Lightbulb } from "lucide-react";
+import { Play, Film, Clapperboard, Laptop, Palette, Trophy, Lightbulb } from "lucide-react";
 
 export const About = () => {
   const software = [
-    { icon: AfterEffects, name: "After Effects" },
-    { icon: PremierePro, name: "Premiere Pro" },
-    { icon: Video, name: "Cinema 4D" },
+    { icon: Film, name: "After Effects" },
+    { icon: Play, name: "Premiere Pro" },
+    { icon: Clapperboard, name: "Cinema 4D" },
     { icon: Palette, name: "Photoshop" },
   ];
 
